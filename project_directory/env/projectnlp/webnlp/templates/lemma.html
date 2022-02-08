@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<style>
+.widthx{width:150px;}
+</style>
+
+
+<div class="container">
+<table class="table table-striped widthx">
+  <thead>
+      <th scope="col">Lemma Results</th>
+  </thead>
+  <tbody>
+      <tr>
+          <th scope="row">Unprocessed</th>
+      {% for i in unprocessed %}
+      <td class="bg-danger">{{ i }}</td>
+    {% endfor %}
+    </tr>
+<tr>
+    <th scope="row">Lemmatized </th>
+        {% for i in lemmatized %}
+     <td class="bg-danger">{{ i }} </td>
+      {% endfor %}
+  </tr>
+  </tbody>
+
+</table>
+</div>
+{% endblock %}

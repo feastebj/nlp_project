@@ -1,4 +1,8 @@
 {% extends 'base.html' %}
+
+{% load static %}
+<img src="{% static 'style.css' %}" alt="My image">
+
 {% block content %}
 <style>
    .widthx{width:1200px;}
@@ -8,34 +12,11 @@
 <div class="container">
 <form class='form-group widthx' method = "POST" action = "{% url 'regex' %}">
    {% csrf_token %}
-   <label for="exampleFormControlTextarea1"><strong>Enter Your Text For Regex</strong></label>
-   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="regexform" placeholder="Please enter your text here for regex"></textarea>
+   <label for="exampleFormControlTextarea1"><strong>Enter your text for sentiment analysis here:</strong></label>
+   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="regexform" placeholder="Enter your text here"></textarea>
    <br>
    <button type="submit" class="btn btn-outline-primary">Regex</button>
 </form>
 <br>
-<form class='form-group widthx' method = "POST" action = "{% url 'lemma' %}">
-   {% csrf_token %}
-   <label for="exampleFormControlTextarea1"><strong>Enter Your Text for Lemma</strong></label>
-   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="lemmaform" placeholder="Please enter your text here for lemmatization"></textarea>
-   <br>
-   <button type="submit" class="btn btn-outline-success">Lemma</button>
-</form>
-<br>
-<form class='form-group widthx' method = "POST" action = "{% url 'pos' %}">
-   {% csrf_token %}
-   <label for="exampleFormControlTextarea1"><strong>Enter Your Text for POS</strong></label>
-   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="posform" placeholder="Please enter your text here for POS"></textarea>
-   <br>
-   <button type="submit" class="btn btn-outline-warning">POS</button>
-</form>
-<br>
-<form class='form-group widthx' method = "POST" action = "{% url 'ner' %}">
-   {% csrf_token %}
-   <label for="exampleFormControlTextarea1"><strong>Enter Your Text for NER</strong></label>
-   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="nerform" placeholder="Please enter your text here for NER"></textarea>
-   <br>
-   <button type="submit" class="btn btn-outline-dark">NER</button>
-</form>
 <div>
 {% endblock %}

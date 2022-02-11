@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/ben/active_projects/portal/Rose Y5/CSSE490/django/project_directory/env/projectnlp/env"
+VIRTUAL_ENV="/home/ben/active_projects/portal/Rose Y5/CSSE490/django/nlp_project/project_directory/env/projectnlp/env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

@@ -1,20 +1,22 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 <style>
-   .widthx{width:1200px;}
+    .widthx {
+        width: 600px;
+    }
 </style>
-<br>
-<br>
+<br />
+<br />
+
 <div class="container">
-<form class='form-group widthx' method = "POST" action = "{% url 'regex' %}">
-   {% csrf_token %}
-   <label for="exampleFormControlTextarea1"><strong>Enter your text for sentiment analysis here:</strong></label>
-   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="regexform" placeholder="Enter your text here"></textarea>
-   <br>
-   <button type="submit" class="btn btn-outline-primary">Regex</button>
-</form>
-<br>
-<div>
-{% endblock %}
+    <form class="form-group widthx" method="POST" action="{% url 'regex' %}">
+        {% csrf_token %}
+        <label for="exampleFormControlTextarea1"><strong>Enter your text for sentiment analysis here:</strong></label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="regexform" placeholder="Enter your text here"></textarea>
+        <br />
+        <button type="submit" class="btn btn-outline-primary">Start</button>
+    </form>
+    <br />
+    <div>
+        {% endblock %}
+    </div>
+</div>

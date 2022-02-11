@@ -1,25 +1,31 @@
 {% extends 'base.html' %}
 
-<br>
-<br>
+<br />
+<br />
 {% block content %}
 <style>
-.widthx{width:150px;}
+    .widthx {
+        width: 200px;
+    }
 </style>
-
+<br />
+<br />
 <div class="container">
-<table class="table table-striped widthx">
-  <thead>
-      <th scope="col">US Phone numbers</th>
-  </thead>
-  <tbody>
-  	{% for number in phone %}
-    <tr>
-      <td class="bg-primary">{{ number }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-<div>
-
-{% endblock %}
+    <table class="table table-striped widthx">
+        <tbody>
+            <tr>
+                {% for item1, item2 in mylist %} {% if item2 < 0.4 %}
+                <button type="submit" class="btn btn-info btn-lg">{{ item1 }}</button>
+                {% elif item2 < 0.7 %}
+                <button type="submit" class="btn btn-warning btn-lg">{{ item1 }}</button>
+                {% elif item2 >= 0.7 %}
+                <button type="submit" class="btn btn-danger btn-lg">{{ item1 }}</button>
+                {% endif %} {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <div>
+        {% endblock %}
+    </div>
+</div>

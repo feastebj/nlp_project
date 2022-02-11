@@ -8,7 +8,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV "/home/ben/active_projects/portal/Rose Y5/CSSE490/django/project_directory/env/projectnlp/env"
+setenv VIRTUAL_ENV "/home/ben/active_projects/portal/Rose Y5/CSSE490/django/nlp_project/project_directory/env/projectnlp/env"
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"

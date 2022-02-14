@@ -14,12 +14,12 @@
     <table class="table table-striped widthx">
         <tbody>
             <tr>
-                {% for item1, item2 in mylist %} {% if item2 < 0.4 %}
-                <button type="submit" class="btn btn-info btn-lg">{{ item1 }}</button>
-                {% elif item2 < 0.7 %}
-                <button type="submit" class="btn btn-warning btn-lg">{{ item1 }}</button>
-                {% elif item2 >= 0.7 %}
-                <button type="submit" class="btn btn-danger btn-lg">{{ item1 }}</button>
+                {% for tok, score in toks %} {% if score < -0.33 %}
+                <button type="submit" class="btn btn-info btn-lg">{{ tok }}</button>
+                {% elif score < 0.33 %}
+                <button type="submit" class="btn btn-warning btn-lg">{{ tok }}</button>
+                {% elif score >= 0.33 %}
+                <button type="submit" class="btn btn-danger btn-lg">{{ tok }}</button>
                 {% endif %} {% endfor %}
             </tr>
         </tbody>
@@ -29,7 +29,7 @@
     <a>Sentiment analysis output:</a>
     <br />
     <br />
-        <button type="submit" class="btn btn-outline-primary btn-lg">Sentences were rated as 42.3% Negative<br/>Sentences were rated as 38.1% Neutral<br/>Sentences were rated as 19.6% Positive<br/>Sentences overall rated as Negative</button>
+        <button type="submit" class="btn btn-outline-primary btn-lg">Sentences was given a final rating of {{ final_rating }}</button>
     <div>
         {% endblock %}
     </div>

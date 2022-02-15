@@ -15,11 +15,11 @@
         <tbody>
             <tr>
                 {% for tok, score in toks %} {% if score < -0.33 %}
-                <button type="submit" class="btn btn-info btn-lg">{{ tok }}</button>
+                <button type="submit" class="btn btn-info btn-lg" title={{score}}>{{ tok }}</button>
                 {% elif score < 0.33 %}
-                <button type="submit" class="btn btn-warning btn-lg">{{ tok }}</button>
+                <button type="submit" class="btn btn-warning btn-lg" title={{score}}>{{ tok }}</button>
                 {% elif score >= 0.33 %}
-                <button type="submit" class="btn btn-danger btn-lg">{{ tok }}</button>
+                <button type="submit" class="btn btn-danger btn-lg" title={{score}}>{{ tok }}</button>
                 {% endif %} {% endfor %}
             </tr>
         </tbody>

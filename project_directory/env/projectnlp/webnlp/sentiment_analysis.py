@@ -36,3 +36,13 @@ def sentiwordnet_analyze(text):
     norm_final_score = round(final_score / token_count, 2)
         
     return norm_final_score, scored_tokens
+
+def get_sentiment_color(sent):
+    if sent is None:
+        return "#000"
+    r = g = 0
+    if sent < 0:
+        r = int(abs(sent * 255))
+    else:
+        g = int(sent*255)
+    return '#%02X%02X00' % (r, g)

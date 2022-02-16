@@ -13,6 +13,9 @@ def regex(request):
 		print(text_body)
 
 		sentiment_score, tokens = sent.sentiwordnet_analyze(text_body)
+		color = [sent.get_sentiment_color(tok[1]) for tok in tokens]
+		tokens = [(tokens[i][0], tokens[i][1], color[i]) for i in range(len(tokens))]
+
 		
 		context = {
 		            'toks': tokens,

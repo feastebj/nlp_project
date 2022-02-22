@@ -130,5 +130,7 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+CSRF_TRUSTED_ORIGINS = ['https://writers-sentiment-analyzer.herokuapp.com']
+
 import django_heroku
 django_heroku.settings(locals())

@@ -2,6 +2,7 @@ import nltk
 from nltk.corpus import sentiwordnet as swn
 import spacy
 
+nltk.download('wordnet')
 nltk.download('sentiwordnet')
 nlp = spacy.load('en_core_web_sm')
 

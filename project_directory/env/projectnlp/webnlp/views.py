@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.decorators.csrf import ensure_csrf_cookie
 import webnlp.sentiment_analysis as sent
 
 # Create your views here.
@@ -6,6 +7,7 @@ import webnlp.sentiment_analysis as sent
 def home(request): 
 	return render(request,"home.html",{})
 
+@ensure_csrf_cookie
 def regex(request):
 	import re
 	if request.method=="POST":
